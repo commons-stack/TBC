@@ -4,19 +4,19 @@ self.__precacheManifest = [
     "url": "/TBC/static/js/runtime~main.1d626f60.js"
   },
   {
-    "revision": "a74d866d30d6cac80f55",
-    "url": "/TBC/static/js/main.50d564f1.chunk.js"
+    "revision": "c6b9a0efc3b12a8df925",
+    "url": "/TBC/static/js/main.32c0b488.chunk.js"
   },
   {
     "revision": "3d4b3c4b25a8e96e126f",
     "url": "/TBC/static/js/2.cbdfaefe.chunk.js"
   },
   {
-    "revision": "a74d866d30d6cac80f55",
+    "revision": "c6b9a0efc3b12a8df925",
     "url": "/TBC/static/css/main.a3632aa3.chunk.css"
   },
   {
-    "revision": "9d348ce956945f200ce317267dc23452",
+    "revision": "e3a6ac3a2bea2ac17bb9d7c28bcbd2d1",
     "url": "/TBC/index.html"
   }
 ];
