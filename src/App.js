@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import "./App.css";
 
 import Chart from "./Chart";
@@ -55,7 +55,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <div class="container">
+        <div className="container">
           <h1>Token Bonding curve App</h1>
           <div className="row m">
             {[
@@ -63,8 +63,10 @@ function App() {
               <Input name="theta (%)" handler={[theta, setTheta]} />,
               <Input name="d0 (xDAI)" handler={[d0, setD0]} />,
               <Input name="p0 (xDAI)" handler={[p0, setP0]} />
-            ].map(component => (
-              <div className="col top-input">{component}</div>
+            ].map((inpt, i) => (
+              <div key={i} className="col top-input">
+                {inpt}
+              </div>
             ))}
           </div>
 
@@ -106,7 +108,7 @@ function App() {
 
           <div className="row m">
             <div className="col">
-              <div class="alert alert-secondary" role="alert">
+              <div className="alert alert-secondary" role="alert">
                 Play around with the values below to simulate a buy
               </div>
             </div>
@@ -123,8 +125,10 @@ function App() {
                 name="delta R (as % of R0)"
                 handler={[dRPercent, setDRPercent]}
               />
-            ].map(component => (
-              <div className="col top-input big">{component}</div>
+            ].map((inpt, i) => (
+              <div key={i} className="col top-input big">
+                {inpt}
+              </div>
             ))}
           </div>
 

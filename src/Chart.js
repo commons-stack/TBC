@@ -46,7 +46,7 @@ function Chart({ from, to, steps, f, refs = [], label }) {
       />
       <Tooltip />
       {refs.map(ref => (
-        <ReferenceLine {...ref} stroke="red" />
+        <ReferenceLine key={ref.label} {...ref} stroke="red" />
       ))}
       <Line dataKey="y" />
     </LineChart>
