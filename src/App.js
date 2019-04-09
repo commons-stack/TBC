@@ -12,7 +12,7 @@ function App() {
   const [p0, setP0] = useState(0.01); // initial price xDAI
   // Sale parameters
   const R0 = (1 - theta / 100) * d0; // initial Reserve, xDAI
-  const S0 = R0 / p0; // initial supply, Tokens
+  const S0 = d0 / p0; // initial supply, Tokens
   const V0 = S0 ** k / R0; // invariant coef
 
   const [timesR, setTimesR] = useState(2);
