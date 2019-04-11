@@ -1,6 +1,7 @@
 var assert = require("assert");
 
-export default class AugBondCurve {
+export default class AugBondCurve
+{
   constructor(
     k = 4,
     theta = 35, // initial funding pool allocation
