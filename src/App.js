@@ -6,9 +6,9 @@ import Input from "./Input";
 
 function App() {
   // Curve parameters
-  const [k, setK] = useState(4);
-  const [theta, setTheta] = useState(35); // initial funding pool allocation
-  const [d0, setD0] = useState(3e6); // initial raise xDAI
+  const [k, setK] = useState(2.83333333333333333); // initial kappa, signifying curvature
+  const [theta, setTheta] = useState(40); // initial funding pool allocation
+  const [d0, setD0] = useState(2.5e6); // initial raise xDAI
   const [p0, setP0] = useState(0.01); // initial price xDAI
   // Sale parameters
   const R0 = (1 - theta / 100) * d0; // initial Reserve, xDAI
@@ -17,12 +17,12 @@ function App() {
 
   const [timesR, setTimesR] = useState(2);
 
-  const [dRPercent, setDRPercent] = useState(25);
+  const [dRPercent, setDRPercent] = useState(1);
 
   const priceFofR = _R => (k * _R ** ((k - 1) / k)) / V0 ** (1 / k);
   const priceFofS = _S => (k * _S ** (k - 1)) / V0;
 
-  const [RStartPercent, setRStartPercent] = useState(135); // initial price xDAI
+  const [RStartPercent, setRStartPercent] = useState(100); // initial price xDAI
 
   // Scale
   const dR = (parseInt(R0) * parseFloat(dRPercent)) / 100;
@@ -77,7 +77,7 @@ function App() {
                 {initData.map(([a, b]) => (
                   <>
                     <span key={a + 1}>{a}</span>
-                    <span key={a + 2}>{b.toFixed(3)}</span>
+                    <span key={a + 2}>{b.toFixed(6)}</span>
                   </>
                 ))}
               </div>
@@ -88,7 +88,7 @@ function App() {
                 {priceData.map(([a, b]) => (
                   <>
                     <span key={a + 1}>{a}</span>
-                    <span key={a + 2}>{b.toFixed(3)}</span>
+                    <span key={a + 2}>{b.toFixed(6)}</span>
                   </>
                 ))}
               </div>
@@ -99,7 +99,7 @@ function App() {
                 {buyData.map(([a, b]) => (
                   <>
                     <span key={a + 1}>{a}</span>
-                    <span key={a + 2}>{b.toFixed(3)}</span>
+                    <span key={a + 2}>{b.toFixed(6)}</span>
                   </>
                 ))}
               </div>
