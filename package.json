@@ -1,6 +1,6 @@
 {
   "name": "tbc-app",
-  "homepage": "https://dapplion.github.io/TBC",
+  "homepage": ".",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
